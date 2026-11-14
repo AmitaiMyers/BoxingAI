@@ -1,0 +1,175 @@
+{
+ "timing": {
+  "framesPerSecond": 60,
+  "decisionIntervalFrames": 2,
+  "roundDurationSeconds": 60.0
+ },
+ "ring": {
+  "halfSize": 3.0,
+  "startOffset": 1.0,
+  "startCenterJitter": 1.0
+ },
+ "body": {
+  "bodyRadius": 0.25,
+  "headRadius": 0.14,
+  "torsoRadius": 0.2,
+  "gloveRadius": 0.1,
+  "standingHeadHeight": 1.6,
+  "duckedHeadHeight": 1.2,
+  "torsoHeight": 1.15,
+  "forwardSpeed": 2.5,
+  "backwardSpeed": 2.0,
+  "strafeSpeed": 2.0,
+  "turnRate": 6.0,
+  "strikingSpeedMultiplier": 0.3,
+  "guardingSpeedMultiplier": 0.6,
+  "slippingSpeedMultiplier": 0.0,
+  "exhaustedSpeedMultiplier": 0.5,
+  "neutralGloveOffset": {
+   "forward": 0.25,
+   "outward": 0.14,
+   "height": 1.4
+  },
+  "highGuardGloveOffset": {
+   "forward": 0.2,
+   "outward": 0.08,
+   "height": 1.58
+  },
+  "lowGuardGloveOffset": {
+   "forward": 0.22,
+   "outward": 0.12,
+   "height": 1.15
+  },
+  "slipGloveOffset": {
+   "forward": 0.2,
+   "outward": 0.12,
+   "height": 1.2
+  },
+  "exhaustedGloveOffset": {
+   "forward": 0.15,
+   "outward": 0.18,
+   "height": 1.0
+  },
+  "gloveBlendPerFrame": 0.35
+ },
+ "defense": {
+  "guardDamageReduction": 0.8,
+  "slipDurationFrames": 18,
+  "slipCooldownFrames": 24,
+  "slipUppercutDamageMultiplier": 1.5,
+  "timedBlockWindowFrames": 30
+ },
+ "stamina": {
+  "idleRegenPerSecond": 0.12,
+  "retreatRegenPerSecond": 0.06,
+  "moveCostPerSecond": 0.03,
+  "guardCostPerSecond": 0.05,
+  "slipCost": 0.05,
+  "blockCost": 0.01,
+  "missedStrikeExtraCostFraction": 0.5,
+  "exhaustionDurationFrames": 120
+ },
+ "combat": {
+  "baseStrikeDamage": 0.04,
+  "strikes": {
+   "JAB": {
+    "windupFrames": 6,
+    "activeFrames": 3,
+    "recoveryFrames": 8,
+    "damageMultiplier": 1.0,
+    "staminaCost": 0.04,
+    "targetZone": "head",
+    "hand": "lead",
+    "windupOffset": {
+     "forward": 0.18,
+     "outward": 0.14,
+     "height": 1.5
+    },
+    "extendedOffset": {
+     "forward": 1.0,
+     "outward": 0.0,
+     "height": 1.6
+    }
+   },
+   "CROSS": {
+    "windupFrames": 10,
+    "activeFrames": 3,
+    "recoveryFrames": 14,
+    "damageMultiplier": 2.0,
+    "staminaCost": 0.07,
+    "targetZone": "head",
+    "hand": "rear",
+    "windupOffset": {
+     "forward": 0.1,
+     "outward": 0.16,
+     "height": 1.5
+    },
+    "extendedOffset": {
+     "forward": 1.05,
+     "outward": 0.0,
+     "height": 1.6
+    }
+   },
+   "HOOK": {
+    "windupFrames": 12,
+    "activeFrames": 4,
+    "recoveryFrames": 16,
+    "damageMultiplier": 2.5,
+    "staminaCost": 0.09,
+    "targetZone": "body",
+    "hand": "lead",
+    "windupOffset": {
+     "forward": 0.15,
+     "outward": 0.4,
+     "height": 1.2
+    },
+    "extendedOffset": {
+     "forward": 0.8,
+     "outward": 0.0,
+     "height": 1.15
+    }
+   },
+   "UPPERCUT": {
+    "windupFrames": 14,
+    "activeFrames": 4,
+    "recoveryFrames": 20,
+    "damageMultiplier": 3.25,
+    "staminaCost": 0.11,
+    "targetZone": "head",
+    "hand": "rear",
+    "windupOffset": {
+     "forward": 0.3,
+     "outward": 0.1,
+     "height": 0.95
+    },
+    "extendedOffset": {
+     "forward": 0.75,
+     "outward": 0.0,
+     "height": 1.75
+    }
+   }
+  }
+ },
+ "rewards": {
+  "cleanHitReward": 5.0,
+  "impactSpeedReference": 20.0,
+  "timedDefenseReward": 3.0,
+  "centerControlRewardPerSecond": 0.25,
+  "centerControlRadius": 2.0,
+  "damagePenaltyPerHealthPoint": 0.5,
+  "exhaustionPenalty": 10.0,
+  "passivityGraceSeconds": 3.0,
+  "passivityPenaltyPerSecond": 0.5,
+  "guardSpamGraceSeconds": 2.0,
+  "guardSpamPenaltyPerSecond": 0.5,
+  "engagementRange": 1.5,
+  "knockoutReward": 20.0,
+  "timeoutHealthAdvantageReward": 10.0
+ },
+ "observation": {
+  "ringRayCount": 8,
+  "gloveDistanceScale": 2.0,
+  "gloveSpeedScale": 20.0,
+  "gloveAccelerationScale": 1000.0
+ }
+}

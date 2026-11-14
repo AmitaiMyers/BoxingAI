@@ -7,11 +7,26 @@ checkpoint, so you can watch it grow from a flailing novice into a counter-punch
 
 ## Setup
 
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python -m pytest            # optional: run the test-suite
+Windows (Command Prompt):
+
+```bat
+python -m venv .venv
+.venv\Scripts\activate
+python -m pip install -r requirements.txt
+python -m pytest
 ```
+
+macOS / Linux:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pytest
+```
+
+Run each line separately. After activating, the prompt starts with `(.venv)`;
+the packages are installed inside that folder, not into the system Python.
 
 ## Commands
 
