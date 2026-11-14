@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { BOT_DIFFICULTIES, BOT_PROFILES, ScriptedBot, seededRandom } from './bot';
 import { GAME_CONFIG, roundFrames } from './config';
 import { BoxingMatch } from './match';

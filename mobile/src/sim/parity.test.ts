@@ -6,6 +6,8 @@
  * Regenerate the recording with `python -m tools.export_for_mobile`.
  */
 
+import { describe, expect, it } from 'vitest';
+
 import trace from './__fixtures__/parityTrace.json';
 import { Boxer, BoxerCommand } from './boxer';
 import { GAME_CONFIG, HANDS } from './config';
